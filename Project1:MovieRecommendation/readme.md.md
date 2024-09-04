@@ -1,6 +1,4 @@
-Certainly! Here's an explanation for each code block along with a rationale for choosing \( k = 200 \) in the K-Means clustering:
 
----
 
 ### **Introduction**
 
