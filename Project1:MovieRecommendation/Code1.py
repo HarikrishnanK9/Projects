@@ -157,6 +157,9 @@ def main(filepath, k):
     # Example usage
     list_in = ["Ocean's Twelve", "Ocean's Thirteen"]
     sub_graph = get_all_adj_nodes(G, list_in)
+    
+    # Plot 1: Subgraph for Ocean's Twelve and Ocean's Thirteen
+    plt.title("Subgraph: Ocean's Twelve and Ocean's Thirteen")
     draw_sub_graph(G, sub_graph)
     
     recommendations = {
@@ -170,14 +173,18 @@ def main(filepath, k):
         print(f"\n{'*' * 40}\nRecommendation for '{title}'\n{'*' * 40}")
         print(recs.head())
 
+    # Plot 2: Recommendation subgraph for Ocean's Twelve
     reco = list(recommendations["Ocean's Twelve"].index[:4].values)
     reco.extend(["Ocean's Twelve"])
     sub_graph = get_all_adj_nodes(G, reco)
+    plt.title("Recommendation Subgraph: Ocean's Twelve")
     draw_sub_graph(G, sub_graph)
 
+    # Plot 3: Recommendation subgraph for Stranger Things
     reco = list(recommendations["Stranger Things"].index[:4].values)
     reco.extend(["Stranger Things"])
     sub_graph = get_all_adj_nodes(G, reco)
+    plt.title("Recommendation Subgraph: Stranger Things")
     draw_sub_graph(G, sub_graph)
 
 if __name__ == "__main__":
